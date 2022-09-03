@@ -15,7 +15,8 @@ pipeline {
         stage('build the source code'){
             steps{
                 echo 'building the source code is started...'
-                sh 'mvn clean deploy -DskipTests=true -Dbuild.number=${BUILD_NUMBER}'
+                //sh 'mvn clean deploy -DskipTests=true -Dbuild.number=${BUILD_NUMBER}'
+                sh 'mvn clean package'
             }
         }
 
