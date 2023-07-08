@@ -1,5 +1,5 @@
 - name: demoplaybook
-  hosts: dev
+  hosts: qa
   become: 'yes'
   become_user: ansible-client
   tasks:
