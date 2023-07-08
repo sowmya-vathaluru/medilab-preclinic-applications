@@ -1,0 +1,11 @@
+- name: demoplaybook
+  hosts: dev
+  become: 'yes'
+  become_user: ansible-client
+  tasks:
+   - name: create a directory on client machine
+     shell: echo admin | sudo -S mkdir /opt/ci-cd-files
+   - name: changing the root permissions
+     shell: echo admin | sudo -S chmod 777 /opt/ci-cd-files
+   - name:  copy the files from ansible server to ansible-client
+     copy: src=/opt/ dest=/opt/ci-cd-files
