@@ -8,4 +8,4 @@
    - name: changing the root permissions
      shell: echo admin | sudo -S chmod 777 /opt/ci-cd-files
    - name:  copy the files from ansible server to ansible-client
-     copy: src=/opt/ci-cd-files/ dest=/opt/ci-cd-files
+     copy: src=/opt/ci-cd-files/ dest=/opt/ci-cd-files/
